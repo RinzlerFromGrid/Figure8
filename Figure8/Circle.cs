@@ -16,4 +16,9 @@ public class Circle : IFigure
     {
         return Math.PI * Math.Pow(_radius, 2);
     }
+
+    public bool IsPossible()
+    {
+        return _radius > 0;
+    }
 }

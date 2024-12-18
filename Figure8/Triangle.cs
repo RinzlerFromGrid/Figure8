@@ -20,6 +20,14 @@ public class Triangle : IFigure
                          SemiPerimeterWithoutSide(_sides[2]));
     }
 
+    public bool IsPossible()
+    {
+        return _sides[0] > 0 &&
+               _sides[1] > 0 &&
+               _sides[2] > 0 &&
+               _sides[0] + _sides[1] > _sides[2];
+    }
+
     public bool IsRightTriangle()
     {
         return Math.Pow(_sides[0], 2) + Math.Pow(_sides[1], 2) == Math.Pow(_sides[2], 2);

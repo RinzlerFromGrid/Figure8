@@ -10,6 +10,11 @@ public class Square(double side) : IFigure
     {
         return _side * _side;
     }
+
+    public bool IsPossible()
+    {
+        return _side > 0;
+    }
 }
 public class Rect(double sideA, double sideB) : IFigure
 {
@@ -20,6 +25,11 @@ public class Rect(double sideA, double sideB) : IFigure
     public double CalcArea()
     {
         return _sideA * _sideB;
+    }
+
+    public bool IsPossible()
+    {
+        return _sideA > 0 && _sideB > 0;
     }
 }
 
