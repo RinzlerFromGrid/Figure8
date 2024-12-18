@@ -35,4 +35,25 @@ public class Tests
                       triangleTwo.IsRightTriangle() &&
                       triangleTree.IsRightTriangle());
     }
+
+    [Test]
+    public void TriangleIsPossible()
+    {
+        var triangle = new Triangle([5, 4, 3]);
+        Assert.IsTrue(triangle.IsPossible());
+    }
+
+    [Test]
+    public void TriangleIsNotPossible()
+    {
+        var triangle = new Triangle([1, 1, 2]);
+        Assert.IsTrue(!triangle.IsPossible());
+    }
+
+    [Test]
+    public void CircleIsPossible()
+    {
+        var circle = new Circle(1);
+        Assert.IsTrue(circle.IsPossible());
+    }
 }
